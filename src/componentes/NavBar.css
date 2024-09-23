@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #556b2f; 
+    color: white;
+    width: 100%; 
+    
+}
+  
+  .navbar-left {
+    flex: 1;
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .navbar-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .notification-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    
+  }
+  

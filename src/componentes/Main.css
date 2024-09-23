@@ -1,0 +1,17 @@
+.main-content {
+    padding: 0px;
+    background-color: #f4f4f4;
+  }
+  
+  .client-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+  }
+  
+  h2{
+
+    padding: 10px;
+
+  }
