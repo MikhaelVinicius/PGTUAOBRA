@@ -5,10 +5,11 @@ import Main from './componentes/Main';
 
 import './App.css'
 import Homepage from './pages/Homepage';
+import CadastroForm from './pages/CadastroForm';
 
 function App() {
   return (
-   <Homepage/>
+   <CadastroForm/>
   );
 }
 export default App;
