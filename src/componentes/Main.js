@@ -1,5 +1,5 @@
 import React from 'react';
-import ClientCard from './ClientCard';
+
 import './Main.css';
 
 const clients = [
@@ -18,16 +18,14 @@ const clients = [
   
 ];
 
-const Main = () => {
+
+const Main = ({ renderComponent, data }) => {
   return (
-    <div className="main-content">
-      <h2>Lista de Clientes</h2>
-      <div className="client-grid">
-        {clients.map((client, index) => (
-          <ClientCard key={index} client={client} />
-        ))}
-      </div>
-    </div>
+    <>
+      {data.map((item, index) =>
+        React.cloneElement(renderComponent(item), { key: index })
+      )}
+    </>
   );
 };
 

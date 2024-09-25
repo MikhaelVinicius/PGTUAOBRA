@@ -8,12 +8,14 @@ import Homepage from './pages/Homepage';
 import CadastroForm from './pages/CadastroForm';
 import Login from './pages/Login';
 import MyComponent from './componentes/TesteComponente';
+import UserPage from './componentes/UserPage';
+import DadosDoClliente from './pages/DadosDoUsuario';
 
 
 
 function App() {
   return (
-   <MyComponent/>
+   <Homepage/>
   );
 }
 export default App;
