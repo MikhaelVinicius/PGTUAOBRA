@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaUser, FaSignOutAlt } from 'react-icons/fa'; // Importando ícones da biblioteca react-icons
+import { FaHome, FaUser, FaSignOutAlt } from 'react-icons/fa';
 import './SidebarMenu.css';
 
 const SidebarMenu = () => {
@@ -7,7 +7,7 @@ const SidebarMenu = () => {
     <div className="sidebar">
       <div className="profile-section">
         <img
-          src="https://via.placeholder.com/150" // Aqui você pode adicionar o link da foto do perfil
+          src="https://via.placeholder.com/150" 
           alt="Profile"
           className="profile-picture"
         />

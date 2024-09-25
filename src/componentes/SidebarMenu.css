@@ -33,7 +33,7 @@
   }
   
   .menu-button {
-    background-color: #4caf50; /* Tom verde */
+    background-color: #4caf50;
     color: white;
     border: none;
     padding: 10px 0;
@@ -46,6 +46,6 @@
   }
   
   .menu-button:hover {
-    background-color: #388e3c; /* Tom verde mais escuro */
+    background-color: #388e3c; 
   }
   

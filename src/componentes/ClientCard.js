@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { FaWhatsapp, FaFileAlt } from 'react-icons/fa'; // Ícones de WhatsApp e de folha
+import { FaWhatsapp, FaFileAlt } from 'react-icons/fa'; 
 import './ClientCard.css';
 
 const ClientCard = ({ client }) => {
   const [showModal, setShowModal] = useState(false);
 
-  // Função para abrir o modal
+ 
   const handleFileClick = () => {
     setShowModal(true);
   };
 
-  // Função para fechar o modal
+
   const closeModal = () => {
     setShowModal(false);
   };
@@ -23,11 +23,11 @@ const ClientCard = ({ client }) => {
         <a href={`https://wa.me/${client.whatsapp}`} target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="icon whatsapp-icon" />
         </a>
-        {/* Ao clicar no ícone de folha, abre o modal */}
+        {}
         <FaFileAlt className="icon file-icon" onClick={handleFileClick} />
       </div>
 
-      {/* Modal de informações do cliente */}
+      {}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
