@@ -6,10 +6,13 @@ import Main from './componentes/Main';
 import './App.css'
 import Homepage from './pages/Homepage';
 import CadastroForm from './pages/CadastroForm';
+import Login from './pages/Login';
+
+
 
 function App() {
   return (
-   <CadastroForm/>
+   <Login/>
   );
 }
 export default App;

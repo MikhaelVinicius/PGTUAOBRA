@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import './CadastroForm.css';
+import './Login.css';
 
-const CadastroForm = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
-    nome: '',
     email: '',
     senha: '',
-    confirmSenha: '',
   });
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({
@@ -19,15 +18,15 @@ const CadastroForm = () => {
     });
   };
 
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length === 0) {
       setSubmitted(true);
-      console.log('Formulário enviado com sucesso:', formData);
-  
+      console.log('Login bem-sucedido:', formData);
+      
     } else {
       setErrors(validationErrors);
       setSubmitted(false);
@@ -37,30 +36,16 @@ const CadastroForm = () => {
 
   const validate = (data) => {
     const errors = {};
-    if (!data.nome) errors.nome = 'Nome é obrigatório';
     if (!data.email) errors.email = 'Email é obrigatório';
     if (!data.senha) errors.senha = 'Senha é obrigatória';
-    if (data.senha !== data.confirmSenha) errors.confirmSenha = 'As senhas não coincidem';
     return errors;
   };
 
   return (
-    <div className="cadastro-form-container">
-      <h2>Cadastro</h2>
-      {submitted && <p className="success-message">Cadastro realizado com sucesso!</p>}
+    <div className="login-form-container">
+      <h2>Login</h2>
+      {submitted && <p className="success-message">Login realizado com sucesso!</p>}
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="nome">Nome</label>
-          <input
-            type="text"
-            name="nome"
-            id="nome"
-            value={formData.nome}
-            onChange={handleChange}
-          />
-          {errors.nome && <p className="error-message">{errors.nome}</p>}
-        </div>
-
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
@@ -85,22 +70,10 @@ const CadastroForm = () => {
           {errors.senha && <p className="error-message">{errors.senha}</p>}
         </div>
 
-        <div className="form-group">
-          <label htmlFor="confirmSenha">Confirmar Senha</label>
-          <input
-            type="password"
-            name="confirmSenha"
-            id="confirmSenha"
-            value={formData.confirmSenha}
-            onChange={handleChange}
-          />
-          {errors.confirmSenha && <p className="error-message">{errors.confirmSenha}</p>}
-        </div>
-
-        <button type="submit" className="submit-button">Cadastrar</button>
+        <button type="submit" className="submit-button">Entrar</button>
       </form>
     </div>
   );
 };
 
-export default CadastroForm;
+export default Login;
