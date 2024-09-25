@@ -4,16 +4,11 @@ import NavBar from './componentes/Navbar';
 import Main from './componentes/Main';
 
 import './App.css'
+import Homepage from './pages/Homepage';
 
 function App() {
   return (
-    <div className="app-container">
-      <SidebarMenu />
-      <div className="main-content">
-        <NavBar />
-        <Main />
-      </div>
-    </div>
+   <Homepage/>
   );
 }
 export default App;
